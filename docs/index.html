@@ -1,0 +1,42 @@
+<!-- initial page -->
+<!DOCTYPE html>
+<html>
+    <!-- metadata -->
+    <head>
+        <meta charset="utf8">
+        <title>Twitter Sentiment Analyzer</title> <!-- req: meta title -->
+        <meta name="description" content="Given a twitter handle, this site will use machine learning to produce a sentiment score for the account."> <!-- req: description, meta description -->
+        <meta name="viewport" content="width=device-width">
+        <link href="reset.css" rel="stylesheet" type="text/css">
+        <link href="../styles/style.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <!-- body -->
+    <div class="container" id="all-container"> <!-- req: div around header and body -->
+        <header> <!-- req: global header -->
+            <h1>Twitter Sentiment Analyzer</h1> <!-- req: title in header -->
+        </header>
+        
+        <body>
+            <div class="container" id="intro-container">
+                <p>This analyzer will allow a user to input a given twitter handle. The twitter page will be scraped for tweets, which will be classified into different sentiments by a pretrained sentiment analyzer, and the sentiments will be aggregated to produce an overall sentiment score for the account.</p>
+            </div>
+
+            <div class="container" id="list-container">
+                <h2>Expected features:</h2> <!-- req: bulleted list -->
+                <ul>
+                    <li>An about section explaining how the analyzer model works</li>
+                    <li>An input field for a twitter handle</li>
+                    <li>A scraping mechanism to collect tweets posted from the handle</li>
+                    <li>A pretrained sentiment analysis model to classify the tweets as positive, negative, etc (may change or vary)</li>
+                </ul>
+            </div>
+            
+            <div class="container" id="image-container">
+                <img id="main-image" src="../emotion_scale.jpg"> <!-- req: image -->
+            </div>
+            
+        </body>
+    </div>
+
+</html>
