@@ -23,18 +23,14 @@
         
         <body>
             <div class="container-fluid" id="intro-container">
-                <p>This analyzer will allow a user to input a given twitter handle. The twitter page will be scraped for tweets, which will be classified into different sentiments by a pretrained sentiment analyzer, and the sentiments will be aggregated to produce an overall sentiment score for the account.</p>
-            </div>
-
-            <div class="d-flex flex-column" id="input-container">
-                <label for="twt-handle-input">Twitter handle:</label>
-                <input class="form-control" id="twt-handle-input" type="text">
-            </div>
-            
-            <div class="container-fluid" id="image-container">
-                <img id="main-image" src="emotion_scale.jpg"> 
-            </div>
-            
+                <h3>Expected features:</h3> <!-- req: bulleted list -->
+                <ul>
+                    <li>About section explaining how the analyzer model works</li>
+                    <li>Input field for a twitter handle</li>
+                    <li>Scraping mechanism to collect tweets posted from the handle</li>
+                    <li>Pretrained sentiment analysis model to classify the tweets as positive, negative, etc</li>
+                </ul>
+            </div>            
         </body>
     </div>
 
