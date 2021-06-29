@@ -14,7 +14,10 @@
     <!-- body -->
     <div class="container" id="all-container"> <!-- req: div around header and body -->
         <header class="container-fluid"> <!-- req: global header -->
-            <h1>Twitter Sentiment Analyzer</h1> <!-- req: title in header -->
+            <h1>
+                Twitter Sentiment Analyzer 
+                <i class="fas fa-theater-masks"></i> 
+            </h1> <!-- req: title in header -->
             <nav class="nav navbar-header">
                 <a class="btn" href="index.html">Try It</a>
                 <a class="btn" href="about.html">About</a>
@@ -22,7 +25,7 @@
         </header>
         
         <body>
-            <div class="container-fluid" id="intro-container">
+            <div class="container bg-light text-dark card m-1" id="intro-container">
                 <h3>Expected features:</h3> <!-- req: bulleted list -->
                 <ul>
                     <li>About section explaining how the analyzer model works</li>
@@ -30,7 +33,11 @@
                     <li>Scraping mechanism to collect tweets posted from the handle</li>
                     <li>Pretrained sentiment analysis model to classify the tweets as positive, negative, etc</li>
                 </ul>
-            </div>            
+                <div id="image-container">
+                    <img id="main-image" src="emotion_scale.jpg"> 
+                </div>
+            </div> 
+            
         </body>
     </div>
 
