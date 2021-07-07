@@ -24,3 +24,18 @@ img {
 #twt-handle-input {
     max-width: 50%;
 }
+
+@media only screen and (min-width: 1200) {
+    #results-1, #results-2 {
+        margin:0 !important;
+    }
+}
+
+@media only screen and (min-width: 750px){
+    #results-row {
+        width: 100%;
+    }
+    #results-1, #results-2 {
+        margin:1% !important;
+    }
+}
