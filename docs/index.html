@@ -20,10 +20,12 @@
                 Twitter Sentiment Analyzer 
                 <i class="fas fa-theater-masks"></i> 
             </h1> <!-- req: title in header -->
+            <h3 id="welcome-name"></h3>
             <nav class="nav navbar-header">
                 <a class="btn" href="index.html">Try It</a>
                 <a class="btn" href="about.html">About</a>
                 <button id="login-button" class="btn" type="button">Login</button>
+                <button id="logout-button" class="btn" type="button">Logout</button>
             </nav>
         </header>
         
@@ -42,9 +44,15 @@
                             <input type="email" class="form-control" id="user-email">
                         </div>
                         <div class="form-group">
-                            <label for="user-password">Age</label>
-                            <input type="password" class="form-control" id="user-password">
+                            <label for="user-name">Name</label>
+                            <input type="text" class="form-control" id="user-name">
                         </div>
+                        <div class="form-group">
+                            <label for="user-age">Age</label> <!-- note: change to age group dropdown? -->
+                            <input type="text" class="form-control" id="user-age">
+                        </div>
+                        <!-- note: add location? -->
+                        <button class="btn" id="login-submit-btn">Submit</button>
                     </div>
                 </div>
             </div>
