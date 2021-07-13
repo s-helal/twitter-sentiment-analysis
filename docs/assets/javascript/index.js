@@ -64,10 +64,15 @@ function submitLoginFun() {
     // show logout button
     logoutBtn.style.display = "block";
 
+    // store user info in json
+    var userInfo = {
+        "email":userEmail.value,
+        "name":userName.value,
+        "age":userAge.value
+    };
+
     // update user info in local storage
-    localStorage.setItem('email',userEmail.value);
-    localStorage.setItem('name', userName.value);
-    localStorage.setItem('age',userAge.value);
+    localStorage.setItem('user',JSON.stringify(userInfo));
 
     // check if the user is logged in: add welcome and logout
     checkLoggedIn();
@@ -83,8 +88,8 @@ function logoutFun() {
 
 // function to check if logged in
 function checkLoggedIn() {
-    // check if name exists
-    if (localStorage.getItem("name") == null) {
+    // check if user info exists
+    if (localStorage.length == 0) {
         // remove welcome with name
         welcomeArea.textContent = "";
 
@@ -94,8 +99,11 @@ function checkLoggedIn() {
         // show login button
         loginBtn.style.display = "block";
     } else {
+        // get user name from local storage
+        var storedName = JSON.parse(localStorage.getItem("user")).name;
+
         // show welcome with name
-        welcomeArea.textContent = "Welcome, " + localStorage.getItem("name");
+        welcomeArea.textContent = "Welcome, " + storedName;
 
         // hide login button
         loginBtn.style.display = "none";
