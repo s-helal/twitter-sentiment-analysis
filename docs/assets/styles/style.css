@@ -55,3 +55,7 @@ img {
 .modal-content {
     margin-top:8%;
 }
+
+#logout-button {
+    display: none;
+}
