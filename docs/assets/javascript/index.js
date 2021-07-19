@@ -37,6 +37,8 @@ function windowHideModal(event) {
 const userEmail = document.getElementById("user-email");
 const userName = document.getElementById("user-name");
 const userAge = document.getElementById("user-age");
+const userTwt = document.getElementById("user-twitter");
+const allInputs = [userEmail, userName, userAge, userTwt];
 
 // get form submit button
 const submitBtn = document.getElementById("login-submit-btn");
@@ -55,6 +57,14 @@ logoutBtn.addEventListener('click',logoutFun);
 
 // function on submit
 function submitLoginFun() {
+    // check input validity
+    for (let i=0; i < allInputs.length; i++) {
+        if (!(allInputs[i].checkValidity()) | allInputs[i].value == "") {
+            alert("Please check that all inputs are valid");
+            return; 
+        }
+    }
+    
     // close the modal
     hideModalFun();
 
@@ -68,8 +78,12 @@ function submitLoginFun() {
     var userInfo = {
         "email":userEmail.value,
         "name":userName.value,
-        "age":userAge.value
+        "age":userAge.value,
+        "twitter":userTwt.value
     };
+
+    // clear input values
+    allInputs.forEach(field => {field.value = ""});
 
     // update user info in local storage
     localStorage.setItem('user',JSON.stringify(userInfo));

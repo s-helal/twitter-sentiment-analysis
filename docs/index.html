@@ -41,15 +41,19 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="user-email">Email address</label>
-                            <input type="email" class="form-control" id="user-email">
+                            <input type="text" class="form-control" pattern="^[a-zA-z0-9\.]+@[a-zA-z0-9\.]+\.[a-zA-z0-9]+$" id="user-email">
                         </div>
                         <div class="form-group">
                             <label for="user-name">Name</label>
-                            <input type="text" class="form-control" id="user-name">
+                            <input type="text" class="form-control" pattern="^\w+$" id="user-name">
                         </div>
                         <div class="form-group">
                             <label for="user-age">Age</label> <!-- note: change to age group dropdown? -->
-                            <input type="text" class="form-control" id="user-age">
+                            <input type="text" class="form-control" pattern="^\d+$" id="user-age">
+                        </div>
+                        <div class="form-group">
+                            <label for="user-twitter">Twitter Handle</label>
+                            <input type="text" class="form-control" pattern="^[a-zA-z0-9]{4,15}$" id="user-twitter"> <!-- 4-14 alphanum or "_" chars -->
                         </div>
                         <!-- note: add location? -->
                         <button class="btn" id="login-submit-btn">Submit</button>
