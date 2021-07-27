@@ -1,0 +1,29 @@
+{
+  "name": "s-helal.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node docs/assets/javascript/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-helal/s-helal.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s-helal/s-helal.github.io/issues"
+  },
+  "homepage": "https://github.com/s-helal/s-helal.github.io#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.10",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
+}

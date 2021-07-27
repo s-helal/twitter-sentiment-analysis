@@ -59,3 +59,7 @@ img {
 #logout-button {
     display: none;
 }
+
+.result-card {
+    display: none;
+}
