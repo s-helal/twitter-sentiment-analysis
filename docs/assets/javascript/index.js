@@ -148,19 +148,17 @@ function scrapeSiteFun(event){
     for (let i=0; i < 10; i++){
         resultCards[i].style.display = 'none';
     }
-
-    // construct search url
-    const searchUrl = "https://scholar.google.com/scholar?q=" + encodeURI(event.target.textContent);
     
     // send POST request for article data
-    fetch('/', {
-        method: 'POST',
-        body: JSON.stringify({searchUrl: searchUrl}),
+    fetch('/api/?userQuery=' + event.target.textContent, {
+        method: 'GET',
+        // body: JSON.stringify({searchUrl: searchUrl}),
         headers: {"Content-Type": "application/json"}
     }).then(response => {
         // parse response from json into an object
-        response.json()}
+        return(response.json())}
         ).then(data => {
+            console.log(data);
             // loop through articles
             for (let i=1; i < 10; i++){
                 // get a tile for displaying
@@ -173,6 +171,5 @@ function scrapeSiteFun(event){
                 currentTile.childNodes[1].textContent = data[i].article;
             }
         }
-    )
-    .catch(error => console.log(error))      
+    ).catch(error => console.log(error))      
 }

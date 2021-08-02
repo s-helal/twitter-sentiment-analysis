@@ -63,3 +63,7 @@ img {
 .result-card {
     display: none;
 }
+
+.search-btn, .result-card {
+    margin-bottom: 2%;
+}
