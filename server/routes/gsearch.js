@@ -4,17 +4,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const axios = require('axios');
 
-// create express application
-const app = express();
-
-// middleware to serve static files from the ./docs directory
-app.use(express.static('docs'))
+// initialize router
+var router = express.Router()
 
 // middleware to parse request bodies
-app.use(bodyParser.json());
+router.use(bodyParser.json());
 
 // listen for get request to this file
-app.get('/api', (req,res) => {
+router.get('/', (req,res) => {
     // get search url
     const searchUrl = "https://scholar.google.com/scholar?q=" + encodeURI(req.query.userQuery);
     
@@ -55,7 +52,5 @@ app.get('/api', (req,res) => {
         })    
 })
 
-// create server and start listening for requests
-app.listen(3000,() => {
-    console.log("server is running on port 3000");
-})
+// export router
+module.exports = router;

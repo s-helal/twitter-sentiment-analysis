@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "directories": {
-    "doc": "docs"
+    "doc": "client"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node docs/assets/javascript/server.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
